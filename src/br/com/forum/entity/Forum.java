@@ -6,16 +6,16 @@ import java.util.Set;
 public class Forum implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private int idoforum;
+	private int idForum;
 	private String assunto;
 	private String descricao;
 	private Set<Usuario> usuarios;
 	
-	public int getIdoforum() {
-		return idoforum;
+	public int getidForum() {
+		return idForum;
 	}
-	public void setIdoforum(int idoforum) {
-		this.idoforum = idoforum;
+	public void setidForum(int idForum) {
+		this.idForum = idForum;
 	}
 	public String getAssunto() {
 		return assunto;
