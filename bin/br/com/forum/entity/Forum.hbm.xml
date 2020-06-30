@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/06/2020 19:16:04 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="br.com.forum.entity.Forum" table="FORUM" catalog="forumuser">
+        <id name="idForum" type="int">
+            <column name="IDOFORUM" />
+            <generator class="assigned" />
+        </id>
+        <property name="assunto" type="java.lang.String">
+            <column name="ASSUNTO" length="45"/>
+        </property>
+        <property name="descricao" type="java.lang.String">
+            <column name="DESCRICAO" />
+        </property>
+        <set name="usuarios" table="USUARIO" inverse="false" lazy="true" cascade="save-update">
+            <key>
+                <column name="IDOFORUM" not-null="true" />
+            </key>
+            <one-to-many class="br.com.forum.entity.Usuario" />
+        </set>
+    </class>
+</hibernate-mapping>
