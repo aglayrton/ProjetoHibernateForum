@@ -14,6 +14,7 @@ public class Helper {
 	Session session = null;
 	Transaction transaction = null;
 	
+	//Aqui é salvo os dados de um forum
 	public String salvar(Forum forum) {
 		try {
 			session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -40,6 +41,7 @@ public class Helper {
 	}
 	
 	//#################################################################################
+	//Adiciona o usuario para o forum
 	public String adicionarUsuario(int idForum, int idUsuario) {
 		try {
 			session = HibernateUtil.getSessionFactory().getCurrentSession();
