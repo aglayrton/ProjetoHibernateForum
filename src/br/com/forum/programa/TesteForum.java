@@ -8,7 +8,7 @@ import br.com.forum.helper.Helper;
 
 public class TesteForum {
 	public static void main(String[] args) {
-		incluirForum();
+		//incluirForum();
 		incluirUsuarioNoForum();
 		listarUsuariosPorForum();
 	}

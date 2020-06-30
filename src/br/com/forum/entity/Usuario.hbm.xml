@@ -9,7 +9,7 @@
             <generator class="assigned" />
         </id>
         <many-to-one name="forum" class="br.com.forum.entity.Forum" fetch="join">
-            <column name="FORUM" />
+            <column name="IDFORUM" />
         </many-to-one>
         <property name="nome" type="java.lang.String">
             <column name="NOME" />

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/forumuser</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_schema">FORUMUSER</property>
+        <!-- Diz que todas as intruções construidas pelo sql serão exibidas no log de execução -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- Orienta como o hibernate vai tratar as intancias na suapalicação, no caso como threads -->
+		<property name="hibernate.current_session_context_class">thread</property>
+        <mapping resource="br/com/forum/entity/Forum.hbm.xml" />
+        <mapping resource="br/com/forum/entity/Usuario.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>
